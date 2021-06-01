@@ -1,0 +1,14 @@
+server:
+  port: 10182
+eureka:
+  instance:
+    hostname: localhost
+  client:
+    register-with-eureka: false
+    fetch-registry: false
+    service-url:
+      defaultZone: http://eureka10181:10181/eureka,http://eureka10183:10183/eureka
+
+spring:
+  application:
+    name: euraka-${server.port}
